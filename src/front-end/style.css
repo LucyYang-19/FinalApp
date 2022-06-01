@@ -1,1 +1,46 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Bad+Script);
+@import url(https://fonts.googleapis.com/css?family=Nova+Mono);
 
+
+/* zocial */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #ad96ad;
+}
+
+h1 {
+ color:#000000;
+  font-family: 'Bad Script';
+  margin: 14% 32% 0%;
+}
+
+.warn{
+  margin: 1% 40%;
+}
+
+.button{
+  margin: 1% 45% 0%;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  width: 25%;
+  padding : 1%;
+  margin: 1% 35%;
+  background-color: #8a7c9e;
+}
