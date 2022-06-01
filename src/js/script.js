@@ -19,7 +19,7 @@
         if (this.state.clicked) {
         styles.push('clicked');
         text = 'sTaRt3d!';
-        bodyEl.style.background = '#a590a5';
+        bodyEl.style.background = '#af96af';
         } 
         return (
         <div className={app}>
@@ -37,11 +37,11 @@
         render(){
             return(
             <div className="card">
-                <h1>WELCOME! </h1>
-                <p>The goal of this app is not to help dyslexic kids read 
-                    better despite that being the name of this app. 
-                    Your discretion is advised, we are simply following
-                    a given prompt, thank you for your understanding.</p>
+                <h1>W3LC0ME! </h1>
+                <p>The g0al of this app is ̶n̶o̶t̶  to help dyslexic kids nyeem 
+                    better despite that being le nom of this app. 
+                    Your discretion is advised, nous sommes simply following
+                    a given prompt, ua tsaug pour your understanding.</p>
             </div>
             );
         }
@@ -50,3 +50,44 @@
         <Card/>,
         document.getElementById('curd')
         );
+
+        // loading
+        const Loading =()=>
+  <div className="loading">
+    <div></div>
+    <div></div>
+  </div>  
+
+
+
+class Page extends React.Component {
+  state = {
+    loading: true,
+  };
+  
+  componentDidMount(){
+    this.isLoading = setTimeout(()=>{this.setState({loading: false})}, 2300);
+  }
+  componentWillUnmount() {
+     clearTimeout(this.isLoading);
+  }
+  
+  timer = () => setTimeout(()=>{
+    this.setState({loading: false})
+  }, 2300);
+
+  render() {
+    const {loading} = this.state;
+    return (
+      loading ? (<Loading/>)
+      :(<div className="content">
+          <h1 class="done">CONGRATS! You've Succesfulyl Learned How to Nyeem!</h1>
+      </div>)
+    )
+  }
+}
+
+ReactDOM.render(
+  <Page/>,
+  document.getElementById('root')
+)
